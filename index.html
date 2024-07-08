@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,569 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
+
 <body>
-    
+<!-- ! header -->
+    <header>
+        <nav class="gnb">
+            <ul>
+                <li>Models</li>
+                <li>Shop</li>
+                <li>My Volvo</li>
+                <li>About us</li>
+            </ul>
+        </nav>
+        <div class="logo_box">
+            <img src="imgs/volvo_logo_text.svg" alt="볼보 자동차">
+        </div>
+        <nav class="sub_nav">
+            <a href="#">
+                <span>시승신청</span>
+            </a>
+            <div class="img_box">
+                <img src="imgs/volvo_ico_showroom.svg" alt="전시장 찾기">
+            </div>
+            <div class="img_box">
+                <img src="imgs/volvo_ico_login.svg" alt="로그인">
+            </div>
+        </nav>
+    </header>
+
+<!-- ! side menu -->
+    <div class="side_menu">
+        <div class="close_btn">
+            <div class="img_box">
+                <img src="imgs/volvo_side_menu_close_btn.svg" alt="닫기">
+            </div>
+        </div>
+        <div class="side_menu_tab">
+            <ul>
+                <li>Models</li>
+                <li>Shop</li>
+                <li>My Volvo</li>
+                <li>About us</li>
+            </ul>
+        </div>
+        <div class="side_menu_contents">
+            <div class="models_contents">
+                <div class="tab_list">
+                    <ul>
+                        <li>Electric</li>
+                        <li>Plug-in hybrids</li>
+                        <li>Mild hybrids</li>
+                    </ul>
+                    <div class="compare_models">
+                        <a href="">모델 비교하기 ></a>
+                    </div>
+                </div>
+                <div class="tab_contents_box">
+                    <div class="tab_content">
+                        <div class="tit_box">
+                            <h3>Electric</h3>
+                            <span>순수전기</span>
+                        </div>
+                        <div class="item_box">
+                            <div class="item">
+                                <h5>Crossover</h5>
+                                <ul>
+                                    <li>
+                                        <h4>C40 Recharge</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_electric_c40.png" alt="C40 Recharge">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <a href="">SUV ></a>
+                                <ul>
+                                    <li>
+                                        <h4>XC40 Recharge</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_electric_xc40.png" alt="XC40 Recharge">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4>EX30</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_electric_ex30.png" alt="EX30">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_content">
+                        <div class="tit_box">
+                            <h3>Plug-in hybrids</h3>
+                            <span>플러그인 하이브리드</span>
+                        </div>
+                        <div class="item_box">
+                            <div class="item">
+                                <a href="">SUV ></a>
+                                <ul>
+                                    <li>
+                                        <h4>XC90 Recharge</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_plug_in_xc90.png" alt="XC90 Recharge">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4>XC60 Recharge</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_plug_in_xc60.png" alt="XC60 Recharge">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <a href="">Sedan ></a>
+                                <ul>
+                                    <li>
+                                        <h4>S90 Recharge</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_plug_in_s90.png" alt="S90 Recharge">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_content">
+                        <div class="tit_box">
+                            <h3>Mild hybrids</h3>
+                            <span>마일드 하이브리드</span>
+                        </div>
+                        <div class="item_box">
+                            <div class="item">
+                                <a href="">SUV ></a>
+                                <ul>
+                                    <li>
+                                        <h4>XC90</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_mild_xc90.png" alt="XC90">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4>XC60</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_mild_xc60.png" alt="XC60">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4>XC40</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_mild_xc40.png" alt="XC40">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <a href="">Sedan ></a>
+                                <ul>
+                                    <li>
+                                        <h4>S90</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_mild_s90.png" alt="S90">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4>S60</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_mild_s60.png" alt="S60">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="item">
+                                <a href="">CROSS COUNTRY ></a>
+                                <ul>
+                                    <li>
+                                        <h4>V90 Cross Country</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_mild_v90-cross-country.png"
+                                                alt="V90 Cross Country">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h4>V60 Cross Country</h4>
+                                        <div class="img_box">
+                                            <img src="imgs/volvo_side_menu_mild_v60-cross-country.png"
+                                                alt="V60 Cross Country">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shop_contents">
+                <div class="own_a_volvo">
+                    <h5>OWN A VOLVO</h5>
+                    <ul>
+                        <li>
+                            <a href="#">시승신청</a>
+                        </li>
+                        <li>
+                            <a href="#">나만의 볼보 디자인하기</a>
+                        </li>
+                        <li>
+                            <a href="#">브로슈어 다운로드</a>
+                        </li>
+                        <li>
+                            <a href="#">볼보 SELEKT (인증 중고차)</a>
+                        </li>
+                        <li>
+                            <a href="#">Family Cars</a>
+                        </li>
+                        <li>
+                            <a href="#">City Cars</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="extras">
+                    <h5>EXTRAS</h5>
+                    <ul>
+                        <li>
+                            <a href="#">전시장 찾기</a>
+                        </li>
+                        <li>
+                            <a href="#">액세서리</a>
+                        </li>
+                        <li>
+                            <a href="#">Top-selling 액세서리 제안</a>
+                        </li>
+                        <li>
+                            <a href="#">볼보 라이프스타일 숍</a>
+                        </li>
+                        <li>
+                            <a href="#">라이프스타일 컬렉션 (영문)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="volvo_contents">
+                <div class="service">
+                    <h5>SERVICE</h5>
+                    <ul>
+                        <li>
+                            <a href="#">서비스 바이 볼보</a>
+                        </li>
+                        <li>
+                            <a href="#">서비스 센터 안내</a>
+                        </li>
+                        <li>
+                            <a href="#">리콜 정보 및 대상차량 조회</a>
+                        </li>
+                        <li>
+                            <a href="#">부품 가격 조회</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="support">
+                    <h5>SUPPORT</h5>
+                    <ul>
+                        <li>
+                            <a href="#">지원</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <strong>Contact Us</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="volvo_account">
+                    <h5>VOLVO ACCOUNT</h5>
+                    <ul>
+                        <li>
+                            <a href="#">볼보 카스 앱</a>
+                        </li>
+                        <li>
+                            <a href="#">볼보 오리지널 타이어</a>
+                        </li>
+                        <li>
+                            <a href="#">타이어 에너지 효율 등급</a>
+                        </li>
+                        <li>
+                            <a href="#">주요부품 장착 및 탈거 방법</a>
+                        </li>
+                        <li>
+                            <a href="#">스마트폰 연결</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about_us_contents">
+                <div class="go_electric_with_volvo">
+                    <h5>GO ELECTRIC WITH VOLVO</h5>
+                    <ul>
+                        <li>
+                            <a href="#">전기화 허브</a>
+                        </li>
+                        <li>
+                            <a href="#">순수 전기차</a>
+                        </li>
+                        <li>
+                            <a href="#">플러그 인 하이브리드</a>
+                        </li>
+                        <li>
+                            <a href="#">자동차 충전</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about_volvo_cars">
+                    <h5>ABOUT VOLVO CARS</h5>
+                    <ul>
+                        <li>
+                            <a href="#">우리의 이야기</a>
+                        </li>
+                        <li>
+                            <a href="#">세이프티</a>
+                        </li>
+                        <li>
+                            <a href="#">지속가능성</a>
+                        </li>
+                        <li>
+                            <a href="#">뉴스&이벤트</a>
+                        </li>
+                        <li>
+                            <a href="#">전문 테크니션 양성 프로그램</a>
+                        </li>
+                        <li>
+                            <a href="#">기술 교육 및 정비 자료</a>
+                        </li>
+                        <li>
+                            <a href="#">뉴스레터 신청</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="connect_with_us">
+                    <h5>CONNECT WITH US</h5>
+                    <ul>
+                        <li>
+                            <a href="#">채용</a>
+                        </li>
+                        <li>
+                            <a href="#">투자자 정보(영문)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ! main visual -->
+    <div class="main_visual">
+        <div class="p_main_visual">
+            <video src="video/volvo_pc_main_visual_video.mp4" autoplay muted loop playsinline></video>
+            <div class="txt_box">
+                <h3>A not-so-big, big deal</h3>
+                <h1>EX30</h1>
+            </div>
+            <div class="btn_box">
+                <button>자세히 보기</button>
+                <button>예약하기</button>
+            </div>
+        </div>
+        <div class="m_main_visual">
+            <video src="video/volvo_mobile_main_visual_video.mp4" autoplay muted loop playsinline></video>
+        </div>
+    </div>
+
+<!-- ! main page contents -->
+    <div class="contents">
+        <section class="sec recharge_sec">
+            <!-- Swiper -->
+            <div class="swiper recharge_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide01">
+                        <div class="content_box">
+                            <div class="tit_box">
+                                <h3>C40 Recharge</h3>
+                            </div>
+                            <div class="img_box">
+                                <img src="imgs/volvo_recharge_models_c40.png" alt="C40 Recharge">
+                            </div>
+                            <div class="txt_btn_box">
+                                <ul>
+                                    <li>
+                                        <p><strong>407</strong>km</p>
+                                        <p>1회 충전 주행거리*</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>4.7</strong>s</p>
+                                        <p>가속 (0-100 km/h)</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>408</strong>ps</p>
+                                        <p>마력</p>
+                                    </li>
+                                </ul>
+                                <div class="btn_box">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#">모델 비교하기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide02">
+                        <div class="content_box">
+                            <div class="tit_box">
+                                <h3>XC40 Recharge</h3>
+                            </div>
+                            <div class="img_box">
+                                <img src="imgs/volvo_recharge_models_xc40.png" alt="XC40 Recharge">
+                            </div>
+                            <div class="txt_btn_box">
+                                <ul>
+                                    <li>
+                                        <p><strong>389</strong>km</p>
+                                        <p>1회 충전 주행거리*</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>4.8</strong>s</p>
+                                        <p>가속 (0-100 km/h)</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>408</strong>ps</p>
+                                        <p>마력</p>
+                                    </li>
+                                </ul>
+                                <div class="btn_box">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#">모델 비교하기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide03">
+                        <div class="content_box">
+                            <div class="tit_box">
+                                <h3>XC90 Recharge</h3>
+                            </div>
+                            <div class="img_box">
+                                <img src="imgs/volvo_recharge_models_xc90.png" alt="XC90 Recharge">
+                            </div>
+                            <div class="txt_btn_box">
+                                <ul>
+                                    <li>
+                                        <p><strong>56</strong>km</p>
+                                        <p>1회 충전 주행거리*</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>317</strong>ps</p>
+                                        <p>마력</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>37</strong>g/km</p>
+                                        <p>CO₂ 배출량</p>
+                                    </li>
+                                </ul>
+                                <div class="btn_box">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#">모델 비교하기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide04">
+                        <div class="content_box">
+                            <div class="tit_box">
+                                <h3>XC60 Recharge</h3>
+                            </div>
+                            <div class="img_box">
+                                <img src="imgs/volvo_recharge_models_xc60.png" alt="XC60 Recharge">
+                            </div>
+                            <div class="txt_btn_box">
+                                <ul>
+                                    <li>
+                                        <p><strong>61</strong>km</p>
+                                        <p>1회 충전 주행거리*</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>317</strong>ps</p>
+                                        <p>마력</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>33</strong>g/km</p>
+                                        <p>CO₂ 배출량</p>
+                                    </li>
+                                </ul>
+                                <div class="btn_box">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#">모델 비교하기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide05">
+                        <div class="content_box">
+                            <div class="tit_box">
+                                <h3>S90 Recharge</h3>
+                            </div>
+                            <div class="img_box">
+                                <img src="imgs/volvo_recharge_models_s90.png" alt="S90 Recharge">
+                            </div>
+                            <div class="txt_btn_box">
+                                <ul>
+                                    <li>
+                                        <p><strong>65</strong>km</p>
+                                        <p>1회 충전 주행거리*</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>317</strong>ps</p>
+                                        <p>마력</p>
+                                    </li>
+                                    <li>
+                                        <p><strong>23</strong>g/km</p>
+                                        <p>CO₂ 배출량</p>
+                                    </li>
+                                </ul>
+                                <div class="btn_box">
+                                    <a href="#">자세히 보기</a>
+                                    <a href="#">모델 비교하기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper_button_box">
+                    <div class="swiper-button-next">
+                        <img src="imgs/volvo_swiper_arrow.png" alt="다음 슬라이드">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="imgs/volvo_swiper_arrow.png" alt="이전 슬라이드">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Initialize Swiper -->
+            <script>
+                var swiper = new Swiper(".recharge_swiper", {
+                    slidesPerView: 1,
+                    loop: true,
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                });
+            </script>
+        </section>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
