@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -551,9 +553,6 @@
                 <div class="swiper-pagination"></div>
             </div>
 
-            <!-- Swiper JS -->
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
             <!-- Initialize Swiper -->
             <script>
                 var swiper = new Swiper(".recharge_swiper", {
@@ -571,40 +570,44 @@
                 });
             </script>
         </section>
-        
         <section class="sec why_volvo_sec">
-            <div class="why_volvo_sec_wrap">
-                <h3>Why Volvo?</h3>
+            <h3>Why Volvo?</h3>
 
             <!-- Swiper -->
-            <div thumbsSlider="" class="swiper why_swiper_tab">
+            <div thumbsSlider="" class="swiper why_swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="txt_box">
+                            <div class="slide_txt">
                                 <p>Making your life easier</p>
                                 <p>A에서 B로 이동하는 새로운 여정을 제안합니다.
                                     원하는 시간에, 원하는 방식으로 볼보를 이용할 수 있습니다.</p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="txt_box">
+                            <div class="slide_txt">
                                 <p>Our future is electric</p>
                                 <p>볼보의 자동차는 전기 동력을 사용할 수 있습니다.
                                     당신이 일상 생활에서 환경에 미치는 영향을 줄일 수 있도록 돕습니다.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="txt_box">
+                            <div class="slide_txt">
                                 <p>Protecting what’s important</p>
                                 <p>볼보는 지금껏 지켜온 안전에 관한 유산을 자랑스럽게 여깁니다.
                                     우리는 중요한 것을 보호할 수 있는 새로운 방법을 계속해서 혁신해 나갈 것입니다.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="swiper why_swiper">
+            <div class="swiper why_swiper_tab">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="imgs/volvo_why_volvo_img01.png" alt="Making your life easier">
@@ -617,166 +620,29 @@
                     </div>
                 </div>
             </div>
-            </div>
 
             <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
             <!-- Initialize Swiper -->
             <script>
-                var swiper = new Swiper(".why_swiper_tab", {
+                var swiper = new Swiper(".why_swiper", {
                     loop: true,
-                    spaceBetween: 45,
+                    spaceBetween: 10,
                     slidesPerView: 3,
                     freeMode: true,
                     touchRatio: 0,
                     watchSlidesProgress: true,
-                    autoplay: {  // 자동 슬라이드 설정 , 비 활성화 시 false
-                        delay: 4000,   // 시간 설정
-                        disableOnInteraction: false,  // false로 설정하면 스와이프 후 자동 재생이 비활성화 되지 않음
-                    },
                 });
-
-                var swiper2 = new Swiper(".why_swiper", {
+                var swiper2 = new Swiper(".why_swiper_tab", {
                     loop: true,
-                    spaceBetween: 0,
+                    spaceBetween: 10,
                     slidesPerView: 1,
-                    effect: "fade",
-                    speed:800,
-                    autoplay: {
-                        delay: 4000,   
-                        disableOnInteraction: false,
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
                     },
                     thumbs: {
                         swiper: swiper,
-                    },
-                    on: {
-                        slideChange : function() {
-                            $('.why_swiper_tab .swiper-slide').eq(this.realIndex).addClass('active').siblings('.why_swiper_tab .swiper-slide').removeClass('active');
-                        },
-                    },
-                });
-            </script>
-        </section>
-
-        <section class="sec my_volvo_sec">
-            <div class="my_volvo_sec_wrap">
-                <div class="sec_tit">
-                    <h3>Lorem ipsum</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                        Aenean commodo ligula eget dolor. Aenean massa. 
-                    </p>
-                    <a href="#">나만의 볼보 만들기</a>
-                </div>
-                <div class="visual_box">
-                    <div>
-                        <div class="img_box">
-                            <img src="imgs/volvo_my_volvo_design_img01.png" alt="XC90 Recharge 시트">
-                        </div>
-                        <div class="video_box">
-                            <video src="video/volvo_my_volvo_video.mp4" autoplay muted loop playsinline></video>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="img_box">
-                            <img src="imgs/volvo_my_volvo_design_img03.png" alt="XC90 Recharge 외부 디자인">
-                        </div>
-                        <div class="img_box">
-                            <img src="imgs/volvo_my_volvo_design_img04.png" alt="XC90 Recharge 내부 인테리어">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec electric_cars_sec">
-            <div class="electric_cars_sec_wrap">
-                <div>
-                    <div class="txt_box">
-                        <h3>순수 전기차</h3>
-                        <p>
-                            볼보의 순수 전기차는 주행 거리와 출력에 
-                            영향을 주지 않으면서, 탄소 배출이 없는 주행을 
-                            가능하게 합니다.
-                        </p>
-                        <a href="#">순수 전기차 ↗</a>
-                    </div>
-                    <div class="img_box">
-                        <img src="imgs/volvo_Electric_cars_img01.png" alt="순수 전기차">
-                    </div>
-                </div>
-                <div>
-                    <div class="txt_box">
-                        <h3>Plug-in hybrid cars</h3>
-                        <p>
-                            플러그인 하이브리드 모델은 
-                            걱정 없는 주행을 위해 
-                            전기 모터와 엔진의 조합으로 동력을 사용합니다.
-                        </p>
-                        <a href="#">Plug-in hybrid cars ↗</a>
-                    </div>
-                    <div class="img_box">
-                        <img src="imgs/volvo_Electric_cars_img02.png" alt="플러그인 하이브리드">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="sec news_sec">
-            <!-- Swiper -->
-            <div class="swiper news_swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="img_box">
-                            <img src="imgs/volvo_news_img01.png" alt="볼보자동차코리아, 서울동작경찰서에 어린이 교통안전을 위한 교통안전 용품 5천개 기증">
-                        </div>
-                        <h5>볼보자동차코리아, 서울동작경찰서에 어린이 교통안전을 위한 교통안전 용품 5천개 기증</h5>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img_box">
-                            <img src="imgs/volvo_news_img02.png" alt="볼보자동차코리아, 볼보 군산 전시장 및 서비스센터 신규 오픈">
-                        </div>
-                        <h5>볼보자동차코리아, 볼보 군산 전시장 및 서비스센터 신규 오픈</h5>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img_box">
-                            <img src="imgs/volvo_news_img03.png" alt="볼보자동차, D.S. & DURGA와 스칸디나비아에서 영감을 얻은 한정판 캔들 ‘SWOODISH(스우디시)’ 공개">
-                        </div>
-                        <h5>볼보자동차, D.S. & DURGA와 스칸디나비아에서 영감을 얻은 한정판 캔들 ‘SWOODISH(스우디시)’ 공개</h5>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img_box">
-                            <img src="imgs/volvo_news_img04.png" alt="루프박스 구입 전 고려해야 할 사항">
-                        </div>
-                        <h5>루프박스 구입 전 고려해야 할 사항</h5>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img_box">
-                            <img src="imgs/volvo_news_img05.png" alt="볼보자동차코리아, 푸르메재단과 장애 어린이 가족 및 사회복지 종사자 초청 ‘유키 구라모토 콘서트’ 진행">
-                        </div>
-                        <h5>볼보자동차코리아, 푸르메재단과 장애 어린이 가족 및 사회복지 종사자 초청 ‘유키 구라모토 콘서트’ 진행</h5>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img_box">
-                            <img src="imgs/volvo_news_img06.png" alt="볼보자동차코리아, 나들이철 맞아 ‘서비스 바이 볼보(Service by Volvo) 시즈널 캠페인’ 진행">
-                        </div>
-                        <h5>볼보자동차코리아, 나들이철 맞아 ‘서비스 바이 볼보(Service by Volvo) 시즈널 캠페인’ 진행</h5>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Swiper JS -->
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-            <!-- Initialize Swiper -->
-            <script>
-                var swiper = new Swiper(".news_swiper", {
-                    loop: true,
-                    spaceBetween: 20,
-                    slidesPerView: 4.1,
-                    autoplay: {
-                        delay: 3000,   
-                        disableOnInteraction: false,
                     },
                 });
             </script>

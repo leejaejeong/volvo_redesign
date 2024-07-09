@@ -32,3 +32,7 @@ $(function(){
     })
 })
 
+$('.why_swiper_tab .swiper-slide').click(function(){
+    $('.why_swiper_tab .swiper-slide').removeClass('active') ;
+    $(this).addClass('active') ;
+})
