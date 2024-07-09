@@ -394,6 +394,7 @@
 .electric_cars_sec .electric_cars_sec_wrap > div .txt_box p{
     margin: 0 0 25px 0;
     font-size: var(--size-m);
+    line-height: 1.5;
     font-family: 'Pretendard-Regular';
     color: var(--color-white);
 }
@@ -451,6 +452,7 @@
 
 .news_sec .swiper-slide .img_box{
     margin: 0 0 20px 0;
+    overflow: hidden;
 }
 
 .news_sec .swiper-slide img {
@@ -458,4 +460,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.3s;
+}
+
+.news_sec .swiper-slide:hover img{
+    transform: scale(1.2);
 }

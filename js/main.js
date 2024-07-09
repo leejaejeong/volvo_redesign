@@ -1,3 +1,14 @@
+$(window).scroll(function(){
+
+    let h_offset = $('header').offset().top;
+
+    if($(window).scrollTop() === 0){
+        $('header').removeClass('back_change');
+    }else if($(window).scrollTop() >= h_offset){
+        $('header').addClass('back_change');
+    }
+})
+
 $(function(){
     $(document).ready(function(){
         $('.models_contents > .tab_list li').click(function(){
