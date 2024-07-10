@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <!-- ! header -->
@@ -425,6 +427,60 @@
             </div>
         </section>
         
+        <section class="sec function_sec">
+            <div class="function_sec_wrap">
+                <h3>편리함은 편안함을 의미합니다.</h3>
+                <div>
+                    <div class="img_box">
+                        <img src="imgs/volvo_ex30_function.png" alt="ex30 기능">
+                    </div>
+                    <div class="bullet wheel_bullet"></div>
+                    <div class="line wheel_line01"></div>
+                    <div class="line wheel_line02"></div>
+                    <div class="txt_box wheel_txt_box">
+                        <h5>사각 스포츠 스티어링 휠</h5>
+                        <p>
+                            스티어링 휠의 사각형 디자인은 스포티한 그립감을 제공합니다. 
+                            또한 운전자 제어를 위한 스타일리시한 스위치가 장착되어 있습니다.
+                        </p>
+                    </div>
+                    <div class="bullet seat_bullet"></div>
+                    <div class="line seat_line01"></div>
+                    <div class="line seat_line02"></div>
+                    <div class="txt_box seat_txt_box">
+                        <h5>슬림한 인체공학적인 시트</h5>
+                        <p>
+                            척추 지지력을 극대화할 수 있도록 시트를 설계합니다. 
+                            이렇게 하면 압력, 굽힘 및 어깨 긴장을 줄일 수 있습니다. 
+                            전동식 설정을 사용하여 이상적인 시트 위치를 찾으십시오.
+                        </p>
+                    </div>
+                    <div class="bullet storage_bullet"></div>
+                    <div class="line storage_line01"></div>
+                    <div class="line storage_line02"></div>
+                    <div class="txt_box storage_txt_box">
+                        <h5>다용도 화물 공간 및 보관 공간</h5>
+                        <p>
+                            EX30의 넓은 318L 트렁크로 운반하는 모든 것을 보다 쉽게 싣고 내릴 수 있습니다. 
+                            바닥이 평평하고 립이 없으며, 높낮이 조절로 더욱 편리하게 사용할 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                gsap.registerPlugin(ScrollTrigger);
+
+                gsap.from(".function_sec_wrap .txt_box, .function_sec_wrap .bullet, .function_sec_wrap .line", {
+                    scrollTrigger:{
+                    trigger:".function_sec_wrap .txt_box, .function_sec_wrap .bullet, .function_sec_wrap .line",
+                    start:"0% 100%",
+                    },
+                    y: 100,
+                    duration: 1,
+                })
+            </script>
+        </section>
     </div>
 
     <!-- ! footer -->

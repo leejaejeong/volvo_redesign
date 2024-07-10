@@ -916,3 +916,146 @@
 
 
 
+
+/* !===== function ===== */
+.function_sec{
+    margin: 200px 0;
+}
+
+.function_sec .function_sec_wrap{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.function_sec h3{
+    font-size: var(--size-xxl);
+    font-family: 'Pretendard-SemiBold';
+    color: var(--color-white);
+}
+
+.function_sec .function_sec_wrap > div{
+    position: relative;
+}
+
+.function_sec .function_sec_wrap > div .img_box img{
+    width: 100%;
+}
+
+.function_sec .bullet{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--color-volvo-skyblue);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.function_sec .wheel_bullet{
+    top: 290px;
+    left: 826px;
+}
+
+.function_sec .seat_bullet{
+    top: 370px;
+    left: 147px;
+}
+
+.function_sec .storage_bullet{
+    top: 579px;
+    left: 697px;
+}
+
+.function_sec .line{
+    position: absolute;
+    height: 2px;
+    background-color: var(--color-volvo-skyblue);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.function_sec .wheel_line01{
+    top:296px;
+    left:845px;
+    width: 50px;
+}
+
+.function_sec .wheel_line02{
+    top:269px;
+    left:875px;
+    transform: rotate(-70deg);
+    width: 58px;
+}
+
+.function_sec .seat_line01{
+    top:364px;
+    left:159px;
+    transform: rotate(-45deg);
+    width: 17px;
+}
+
+.function_sec .seat_line02{
+    top:358px;
+    left:173px;
+    width: 111px;
+}
+
+.function_sec .storage_line01{
+    top:573px;
+    left:710px;
+    transform: rotate(-45deg);
+    width: 17px;
+}
+
+.function_sec .storage_line02{
+    top:567px;
+    left:724px;
+    width: 111px;
+}
+
+.function_sec .txt_box{
+    position: absolute;
+    padding: 26px;
+    box-sizing: border-box;
+    max-width: 330px;
+    width: 100%;
+    border: 2px solid var(--color-volvo-skyblue);
+    background-color: rgba(27, 54, 93, 0.8);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.function_sec .txt_box h5{
+    margin: 0 0 16px 0;
+    font-size: var(--size-m);
+    font-family: 'Pretendard-Medium';
+    color: var(--color-white);
+}
+
+.function_sec .txt_box p{
+    font-size: var(--size-xs);
+    line-height: 1.2;
+    font-family: 'Pretendard-Regular';
+    color: var(--color-white);
+}
+
+.function_sec .wheel_txt_box{
+    top:84px;
+    left:816px;
+}
+
+.function_sec .seat_txt_box{
+    top: 222px;
+    left: 293px;
+}
+
+.function_sec .storage_txt_box{
+    top: 510px;
+    left: 840px;
+}
+
+@keyframes delay {
+    0% {
+    }
+    100% {
+      transform: 썸띵(값);
+    }
+  }
+

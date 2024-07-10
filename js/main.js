@@ -1,3 +1,4 @@
+// ! header
 $(window).scroll(function(){
 
     let h_offset = $('header').offset().top;
@@ -9,22 +10,7 @@ $(window).scroll(function(){
     }
 })
 
-$(function(){
-    $(document).ready(function(){
-        $('.models_contents > .tab_list li').click(function(){
-            $('.models_contents > .tab_list li').removeClass('active');
-            $(this).addClass('active');
-            $('.models_contents > .tab_contents_box > div').eq($(this).index()).fadeIn(300).siblings('.models_contents > .tab_contents_box > div').hide();
-        }).filter(':eq(0)').click();
-
-        $('.side_menu_tab li').click(function(){
-            $('.side_menu_tab li').removeClass('active');
-            $(this).addClass('active');
-            $('.side_menu_contents > div').eq($(this).index()).fadeIn(300).siblings('.side_menu_contents > div').hide();
-        })
-    })
-})
-
+// ! side menu
 $(function(){
     $(document).ready(function(){
         $('.side_menu .close_btn .img_box img').click(function(){
@@ -47,10 +33,23 @@ $(function(){
             $('.side_menu_tab li').removeClass('active');
             $('.side_menu_tab li').eq(0).addClass('active');
         })
+
+        $('.models_contents > .tab_list li').click(function(){
+            $('.models_contents > .tab_list li').removeClass('active');
+            $(this).addClass('active');
+            $('.models_contents > .tab_contents_box > div').eq($(this).index()).fadeIn(300).siblings('.models_contents > .tab_contents_box > div').hide();
+        }).filter(':eq(0)').click();
+
+        $('.side_menu_tab li').click(function(){
+            $('.side_menu_tab li').removeClass('active');
+            $(this).addClass('active');
+            $('.side_menu_contents > div').eq($(this).index()).fadeIn(300).siblings('.side_menu_contents > div').hide();
+        })
     })
 })
 
+// ! main page > why volvo
 $('.why_swiper_tab .swiper-slide').click(function(){
-    $('.why_swiper_tab .swiper-slide').removeClass('active') ;
-    $(this).addClass('active') ;
+    $('.why_swiper_tab .swiper-slide').removeClass('active');
+    $(this).addClass('active');
 })
