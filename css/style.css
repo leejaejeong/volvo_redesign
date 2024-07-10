@@ -823,3 +823,96 @@
         font-size: var(--size-m);
     }
 }
+
+
+
+/* !==================== EX30 page ==================== */
+
+/* !===== EX30 visual ===== */
+.ex30_visual{
+    position: relative;
+}
+
+.m_ex30_visual{
+    display: none;
+}
+
+.p_ex30_visual video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+.ex30_visual .txt_box{
+    position: absolute;
+    top:50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 0 0 0 240px;
+}
+
+.ex30_visual .txt_box h1{
+    margin: 0 0 20px 0;
+    font-size: var(--size-xxl);
+    line-height: 1.2;
+    font-family: 'Pretendard-Bold';
+    color: var(--color-white);
+}
+
+.ex30_visual .txt_box h5{
+    font-size: var(--size-s);
+    line-height: 1.2;
+    font-family: 'Pretendard-Regular';
+    color: var(--color-white);
+}
+
+
+
+/* !===== performance ===== */
+.performance_sec {
+    padding: 155px 0;
+    background-image: url(../imgs/volvo_ex30_Performance_back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+}
+
+.performance_sec .performance_txt_wrap{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.performance_sec ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:80px 0;
+    width: 40%;
+}
+
+.performance_sec h3{
+    margin: 0 0 84px 0;
+    font-size: var(--size-xxl);
+    font-family: 'Pretendard-SemiBold';
+    color: var(--color-white);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.performance_sec p{
+    font-size: var(--size-xl);
+    font-family: 'Pretendard-Medium';
+    color: var(--color-white);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.performance_sec p > strong{
+    font-size: var(--size-xxl);
+}
+
+.performance_sec p + p {
+    font-size: var(--size-s);
+}
+
+
+
