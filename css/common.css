@@ -1,12 +1,12 @@
 :root {
     /*! font-size */
-    --size-xxs: 0.875rem;
-    --size-xs: 1rem;
-    --size-s: 1.375rem;
-    --size-m: 1.5rem;
-    --size-l: 1.75rem;
-    --size-xl: 2rem;
-    --size-xxl: 3.25rem;
+    --size-xxs: 0.875rem; /* 14px */
+    --size-xs: 1rem; /* 16px */
+    --size-s: 1.375rem; /* 22px */
+    --size-m: 1.5rem; /* 24px */
+    --size-l: 1.75rem; /* 28px */
+    --size-xl: 2rem; /* 32px */
+    --size-xxl: 3.25rem; /* 52px */
 
     /*! color */
     --color-volvo-navy: #1B365D;
@@ -45,7 +45,7 @@ header .gnb ul{
 }
 
 header .gnb ul li{
-    font-size: 14px;
+    font-size: var(--size-xs);
     font-family: 'GmarketSansMedium';
     cursor: pointer;
 }
@@ -80,7 +80,6 @@ header .sub_nav a span{
     position: relative;
     top: 0;
     left: 0;
-    margin: 0 10px 0 0;
     padding: 10px 40px;
     box-sizing: border-box;
     font-size: 16px;
@@ -119,9 +118,12 @@ header .sub_nav div img{
     cursor: pointer;
 }
 
+header .side_menu_btn{
+    display: none;
+}
+
 header.back_change{
     padding: 20px 40px;
-    /*background-color: rgba(27, 54, 93, 0.8)*/
 }
 
 header.back_change .gnb ul li{
@@ -144,12 +146,66 @@ header.back_change .sub_nav div:hover img{
     opacity: 0.8;
 }
 
+@media(max-width:1240px){
+    header{
+        padding: 35px 20px;
+    }
+
+    header .gnb ul{
+        gap:20px;
+    }
+
+    header .gnb ul li{
+        font-size: 0.75rem;
+    }
+
+    header .logo_box{
+        max-width: 130px;
+    }
+
+    header .sub_nav a span{
+        padding: 10px 20px;
+        box-sizing: border-box;
+        font-size: var(--size-xs);
+    }
+
+    header .sub_nav div{
+        max-width: 20px;
+    }
+
+    header.back_change{
+        padding: 20px 20px;
+    }
+}
+
+@media(max-width:768px){
+    header{
+        flex-direction: row-reverse;
+    }
+
+    header .side_menu_btn{
+        display: block;
+    }
+
+    header .gnb,
+    header .sub_nav{
+        display: none;
+    }
+
+    header.back_change .side_menu_btn img{
+        filter: invert(30%);
+    }
+}
+
+
+
 /* !===== side menu ===== */
 .side_menu{
     position: fixed;
     top:0;
     left: -100%;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     height: 100vh;
     background-color: var(--color-volvo-navy);
     overflow: auto;
@@ -212,6 +268,72 @@ header.back_change .sub_nav div:hover img{
 
 .side_menu > .side_menu_contents > div:first-child{
     display: block;
+}
+
+.side_menu .sub_nav{
+    display: none;
+}
+
+@media(max-width:768px){
+    .side_menu > .sub_nav_box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 20px 40px 20px;
+    }
+
+    .side_menu .close_btn{
+        padding: 0;
+    }
+
+    .side_menu .side_menu_tab{
+        padding: 0 20px;
+        margin: 0 0 40px 0;
+    }
+
+    .side_menu .side_menu_tab ul{
+        justify-content: space-between;
+        gap:10px;
+    }
+
+    .side_menu > .side_menu_contents > div{
+        padding: 0 20px;
+    }
+
+    .side_menu > .sub_nav{
+        display: block;
+    }
+
+    .side_menu .sub_nav{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap:20px;
+        flex-direction: row-reverse;
+    }
+    
+    .side_menu .sub_nav a{        
+        padding: 8px 25px;
+        box-sizing: border-box;
+        font-size: var(--size-xxs);
+        font-family: 'Pretendard-SemiBold';
+        background-color: var(--color-volvo-skyblue);
+        color: var(--color-volvo-navy);
+        cursor: pointer;
+    }
+    
+    .side_menu .sub_nav div{
+        max-width: 25px;
+    }
+    
+    .side_menu .sub_nav div img{
+        width: 100%;
+        cursor: pointer;
+    }
+    
+    .side_menu .side_menu_btn{
+        display: none;
+    }
 }
 
 
@@ -280,13 +402,13 @@ header.back_change .sub_nav div:hover img{
 }
 
 .side_menu .models_contents .tab_content .tit_box h3{
-    font-size: 28px;
+    font-size: var(--size-l);
     font-family: 'Pretendard-Regular';
     color: var(--color-white);
 } 
 
 .side_menu .models_contents .tab_content .tit_box span{
-    font-size: 16px;
+    font-size: var(--size-xs);
     font-family: 'Pretendard-Regular';
     color: var(--color-volvo-yellow);
 }
@@ -338,6 +460,35 @@ header.back_change .sub_nav div:hover img{
     cursor: pointer;
 }
 
+@media(max-width:768px){
+    .side_menu .models_contents .tab_list{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .side_menu .models_contents .tab_list ul{
+        gap: 0;
+    }
+
+    .side_menu .models_contents .tab_list ul li{
+        padding: 10px 15px; 
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .side_menu .models_contents .tab_content .tit_box h3{
+        font-size: var(--size-m);
+    }
+
+    .side_menu .models_contents .tab_content .tit_box span{
+        font-size: var(--size-xxs);
+    }
+
+    .side_menu .models_contents .tab_content .item_box{
+        padding: 33px 20px;
+    }
+}
+
 
 /* !===== side menu > shop ===== */
 .side_menu .shop_contents > div{
@@ -346,14 +497,14 @@ header.back_change .sub_nav div:hover img{
 
 .side_menu .shop_contents h5{
     margin: 0 0 20px 0;
-    font-size: 16px;
+    font-size: var(--size-xs);
     font-family: 'Pretendard-Regular';
     color: var(--color-volvo-yellow);
 }
 
 .side_menu .shop_contents ul li a{
     padding: 10px 0;
-    font-size: 16px;
+    font-size: var(--size-xs);
     font-family: 'Pretendard-Regular';
     color: var(--color-white);
 }
@@ -362,7 +513,6 @@ header.back_change .sub_nav div:hover img{
     text-decoration: underline;
     text-underline-offset: 5px;
 }
-
 
 
 /* !===== side menu > my volvo ===== */
@@ -439,11 +589,13 @@ header.back_change .sub_nav div:hover img{
 
 footer{
     padding: 80px 0;
+    box-sizing: border-box;
     background-color: var(--color-volvo-navy);
 }
 
 footer .footer_wrap{
     max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -461,12 +613,14 @@ footer .quick_link li{
     align-items: center;
     flex: 1;
     padding: 0 0 20px 0;
+    box-sizing: border-box;
+    width: 100%;
     border-bottom: 1px solid var(--color-white);
     cursor: pointer;
 }
 
 footer .quick_link a{
-    font-size: 20px;
+    font-size: var(--size-s);
     font-family: 'Pretendard-Medium';
     color: var(--color-white);
 }
@@ -482,7 +636,6 @@ footer .quick_link li:hover {
 footer .footer_link{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 218px;
     margin: 0 0 95px 0;
 }
@@ -519,7 +672,7 @@ footer .footer_link .footer_logo{
 }
 
 footer .footer_link .footer_logo img{
-    max-width: 150px;
+    min-width: 90px;
     width: 100%;
 }
 
@@ -528,11 +681,12 @@ footer .footer_link .volvo_app{
     justify-content: space-between;
     align-items: center;
     flex: 3.5;
+    padding: 14px;
     background-color: #202A44;
 }
 
 footer .footer_link .volvo_app .left_box{
-    padding: 16px;
+    box-sizing: border-box;
     flex: 1;
 }
 
@@ -544,31 +698,36 @@ footer .footer_link .volvo_app .left_box h5{
 }
 
 footer .footer_link .volvo_app .left_box a{
+    display: block;
     font-size: var(--size-xs);
+    text-decoration: underline;
     font-family: 'Pretendard-Light';
     color: var(--color-white);
-    text-decoration: underline;
 }
 
-footer .footer_link .volvo_app .left_box .qr_box{
+footer .footer_link .volvo_app .left_box .p_download{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     gap: 10px;
 }
 
-footer .footer_link .volvo_app .left_box .qr_box span{
+footer .footer_link .volvo_app .left_box .m_download{
+    display: none;
+}
+
+footer .footer_link .volvo_app .left_box .p_download span{
     font-size: 0.75rem;
     line-height: 1.2;
     font-family: 'Pretendard-Medium';
     color: var(--color-white);
 }
 
-footer .footer_link .volvo_app .left_box .qr_box .img_box{
+footer .footer_link .volvo_app .left_box .p_download .img_box{
     max-width: 75px;
 }
 
-footer .footer_link .volvo_app .left_box .qr_box img{
+footer .footer_link .volvo_app .left_box .p_download img{
     width: 100%;
 }
 
@@ -584,6 +743,7 @@ footer .footer_info {
     display: flex;
     justify-content: space-between;
     padding: 24px 0 0 0 ;
+    box-sizing: border-box;
     border-top: 1px solid var(--color-white);
 }
 
@@ -624,4 +784,109 @@ footer .footer_info .footer_sns_ico .img_box{
 
 footer .footer_info .footer_sns_ico .img_box img{
     width: 100%;
+}
+
+@media(max-width:1240px){
+    footer{
+        padding: 80px 20px;
+    }
+
+    footer .quick_link{
+        gap: 40px;
+    }
+
+    footer .quick_link li{
+        padding: 0 0 15px 0;
+    }
+
+    footer .quick_link a{
+        font-size: var(--size-xs);
+    }
+
+    footer .footer_link{
+        gap: 50px;
+    }
+
+    footer .footer_link > .link_box h5{
+        font-size: var(--size-xs);
+    }
+    
+    footer .footer_link > .link_box ul li a{
+        font-size: var(--size-xxs);
+    }
+
+    footer .footer_link .volvo_app .left_box h5{
+        margin: 0 0 10px 0;
+        font-size: var(--size-xs);
+    }
+    
+    footer .footer_link .volvo_app .left_box a{
+        margin: 0 0 10px 0;
+        font-size: var(--size-xxs);
+    }
+
+    footer .footer_link .volvo_app .left_box .p_download{
+        display: none;
+    }
+    
+    footer .footer_link .volvo_app .left_box .m_download{
+        display: block;
+    }
+
+    footer .footer_info > div ul li a{
+        font-size: var(--size-xxs);
+    }
+    
+    footer .footer_info > div span{
+        font-size: var(--size-xxs);
+    }
+}
+
+@media(max-width:768px){
+    footer .quick_link{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    footer .quick_link li{
+        padding: 0 0 10px 0;
+    }
+
+    footer .footer_link{
+        flex-direction: column;
+        gap: 40px;
+        margin: 0 0 30px 0;
+    }
+
+    footer .footer_link > .link_box ul li:last-child{
+        margin: 0;
+    }
+
+    footer .footer_link .footer_logo{
+        margin: 0 auto;
+    }
+
+    footer .footer_link .footer_logo img{
+        max-width: 90px;
+    }
+
+    footer .footer_info{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .footer_info > div ul{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 0 0 10px 0;
+    }
+
+    footer .footer_info > div span{
+        line-height: 1.2;
+    }
+
+    footer .footer_info .footer_sns_ico{
+        justify-content: flex-start;
+    }
 }

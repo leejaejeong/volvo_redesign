@@ -1,5 +1,5 @@
 /* !===== main visual ===== */
-.p_main_visual{
+.main_visual{
     position: relative;
 }
 
@@ -14,7 +14,7 @@
     display: none;
 }
 
-.p_main_visual .txt_box{
+.main_visual .txt_box{
     position: absolute;
     top:110px;
     left: 0;
@@ -23,20 +23,20 @@
     text-align: center;
 }
 
-.p_main_visual .txt_box h3{
+.main_visual .txt_box h3{
     margin:  0 0 20px 0;
-    font-size: 26px;
+    font-size: var(--size-m);
     font-family: 'GmarketSansMedium';
     color: var(--color-white);
 }
 
-.p_main_visual .txt_box h1{
-    font-size: 52px;
+.main_visual .txt_box h1{
+    font-size: var(--size-xxl);
     font-family: 'Pretendard-Black';
     color: var(--color-white);
 }
 
-.p_main_visual .btn_box{
+.main_visual .btn_box{
     position: absolute;
     bottom: 85px;
     left: 0;
@@ -47,24 +47,67 @@
     width: 100%;
 }
 
-.p_main_visual .btn_box button{
+.main_visual .btn_box a{
     padding: 10px 0;
     box-sizing: border-box;
     max-width: 200px;
     width: 100%;
-    font-size: 24px;
+    text-align: center;
+    font-size: var(--size-m);
     font-family: 'Pretendard-Medium';
     border: 1px solid #fff;
     color: var(--color-white);
     cursor: pointer;
 }
 
-.p_main_visual .btn_box button:hover{
+.main_visual .btn_box a:hover{
     background-color: var(--color-white);
     color: var(--color-black);
 }
 
+@media(max-width:1240px){
+    .main_visual .txt_box h3{
+        font-size: var(--size-s);
+    }
+    
+    .main_visual .txt_box h1{
+        font-size: 3rem;
+    }
 
+    .main_visual .btn_box a{
+        max-width: 150px;
+        font-size: var(--size-s);
+    }
+}
+
+@media(max-width:768px){
+    .m_main_visual{
+        display: block;
+    }
+
+    .p_main_visual{
+        display: none;
+    }
+
+    .m_main_visual video{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        vertical-align: bottom;
+    }
+
+    .main_visual .txt_box h3{
+        font-size: 18px;
+    }
+
+    .main_visual .txt_box h1{
+        font-size: 40px;
+    }
+
+    .main_visual .btn_box a{
+        font-size: var(--size-xs);
+    }
+}
 
 
 /* !===== sec Recharge models ===== */
@@ -76,6 +119,7 @@
 
 .recharge_sec .swiper-slide{
     padding: 100px 0;
+    box-sizing: border-box;
 }
 
 .recharge_sec .swiper-slide.slide01{
@@ -118,12 +162,12 @@
     margin: 0 auto;
 }
 
-.recharge_sec .swiper-slide .tit_box{
+.recharge_sec .swiper-slide .model_name{
     margin: 0 0 80px 0;
 }
 
 .recharge_sec .swiper-slide h3{
-    font-size: 52px;
+    font-size: var(--size-xxl);
     font-family: 'Pretendard-SemiBold';
     color: var(--color-white);
 }
@@ -147,22 +191,26 @@
 
 .recharge_sec .swiper-slide .txt_btn_box ul{
     display: flex;
-    gap: 150px;
+    justify-content: space-between;
     flex: 2;
 }
 
+.recharge_sec .swiper-slide .txt_btn_box ul li{
+    flex: 1;
+}
+
 .recharge_sec .swiper-slide .txt_btn_box ul li p{
-    font-size: 32px;
+    font-size: var(--size-xl);
     font-family: 'Pretendard-Medium';
     color: var(--color-white);
 }
 
 .recharge_sec .swiper-slide .txt_btn_box ul li strong{
-    font-size: 52px;
+    font-size: var(--size-xxl);
 }
 
 .recharge_sec .swiper-slide .txt_btn_box ul li p + p{
-    font-size: 22px;
+    font-size: var(--size-s);
     color: var(--color-white);
 }
 
@@ -175,7 +223,6 @@
 }
 
 .recharge_sec .swiper-slide .txt_btn_box .btn_box a{
-    max-width: 240px;
     width: 100%;
     padding: 20px 0;
     box-sizing: border-box;
@@ -196,7 +243,7 @@
     margin: 0 40px;
 }
 
-.recharge_sec .swiper-pagination{
+.recharge_sec .recharge_pagination{
     display: none;
 }
 
@@ -222,6 +269,100 @@
 }
 
 
+@media(max-width:1240px){
+    .recharge_sec .swiper-slide{
+        padding: 100px 20px;
+    }
+
+    .recharge_sec .swiper-slide .model_name{
+        margin: 0 0 40px 0;
+    }
+
+    .recharge_sec .swiper-slide h3{
+        font-size: 2.75rem;
+    }
+
+    .recharge_sec .swiper-slide .txt_btn_box ul li p{
+        font-size: var(--size-l);
+    }
+    
+    .recharge_sec .swiper-slide .txt_btn_box ul li strong{
+        font-size: 2.75rem;
+    }
+
+    .recharge_sec .swiper-slide .txt_btn_box ul li p + p{
+        font-size: var(--size-xs);
+    }
+
+    .recharge_sec .swiper-slide .txt_btn_box .btn_box{
+        gap: 20px;
+    }
+    
+    .recharge_sec .swiper-slide .txt_btn_box .btn_box a{
+        max-width: 200px;
+        padding: 15px 0;
+        font-size: var(--size-xs);   
+    }
+}
+@media(max-width:768px){
+    .recharge_sec .swiper-slide h3{
+        font-size: var(--size-m);
+        margin: 0 0 22px 0;
+    }
+
+    .recharge_sec .swiper-slide .img_box{
+        margin: 0 0 22px 0;
+    }
+
+    .recharge_sec .swiper-slide .txt_btn_box{
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    .recharge_sec .swiper-slide .txt_btn_box ul{
+        flex-wrap: wrap;
+        gap: 50px;
+        margin: 0 0 22px 0;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .recharge_sec .swiper-slide .txt_btn_box ul li p{
+        font-size: var(--size-xs);
+    }
+
+    .recharge_sec .swiper-slide .txt_btn_box ul li strong{
+        font-size: var(--size-l);
+    }
+
+    .recharge_sec .swiper-slide .txt_btn_box ul li p + p{
+        font-size: var(--size-xxs);
+    }
+
+    .recharge_sec .swiper-slide .txt_btn_box .btn_box{
+        justify-content: space-between;
+        gap: 30px;
+        width: 100%;
+    }
+    
+    .recharge_sec .swiper-slide .txt_btn_box .btn_box a{
+        padding: 10px 0;
+        font-size: var(--size-xs);
+    }
+
+    .recharge_sec .swiper-button-next, 
+    .recharge_sec .swiper-button-prev{
+        display: none;
+    }
+
+    .recharge_sec .recharge_swiper .swiper-wrapper > .recharge_pagination {
+        display: block;
+        bottom: 70px;
+    }
+    .recharge_sec .recharge_swiper .swiper-wrapper > .recharge_pagination .swiper-pagination-bullet-active{
+        background-color: var(--color-volvo-skyblue);
+    }
+}
 
 
 /* !===== sec Why Volvo ===== */
@@ -247,15 +388,9 @@
     width: 100%;
 }
 
-.why_volvo_sec .why_swiper .swiper-slide img {
-    display: block;
-    width: 100%;
-}
-
 .why_swiper_tab .swiper-slide{
     border-top: 2px solid var(--color-volvo-gray);
     padding: 17px 0 34px 0;
-    flex: 1;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -273,7 +408,7 @@
 
 .why_swiper_tab .txt_box p + p{
     font-size: var(--size-s);
-    line-height: 1.2;
+    line-height: 1.5;
     font-family: 'Pretendard-Light';
 }
 
@@ -281,7 +416,87 @@
     color: var(--color-white);
 }
 
+.why_volvo_sec .why_swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+}
 
+.why_volvo_sec .why_swiper .swiper-slide .txt_box{
+    display: none;
+}
+
+.why_volvo_sec .why_swiper .why_pagination{
+    display: none;
+}
+
+@media(max-width:1240px){
+    .why_volvo_sec{
+        padding: 165px 20px;
+    }
+
+    .why_volvo_sec h3{
+        font-size: 2.75rem;
+    }
+
+    .why_swiper_tab .txt_box p{
+        font-size: var(--size-m);
+    }
+    
+    .why_swiper_tab .txt_box p + p{
+        font-size: var(--size-xs);
+    }
+}
+
+@media(max-width:768px){
+    .why_volvo_sec{
+        padding: 100px 20px;
+    }
+
+    .why_volvo_sec h3{
+        margin: 0 0 10px 0;
+        font-size: var(--size-m);
+    }
+
+    .why_swiper_tab > .swiper-wrapper{
+        display: none;
+    }
+
+    .why_volvo_sec .why_swiper .swiper-slide{
+        display: block;
+        padding: 17px 0 0 0;
+        border-top: 2px solid var(--color-white);
+    }
+
+    .why_volvo_sec .why_swiper .swiper-slide .txt_box{
+        display: block;
+        padding: 0 0 17px 0;
+        height: 90px;
+        background-color: var(--color-volvo-navy);
+    }
+    
+    .why_volvo_sec .why_swiper .swiper-slide .txt_box p{
+        margin: 0 0 10px 0;
+        font-size: var(--size-xs);
+        font-family: 'Pretendard-Medium';
+        color: var(--color-white);
+    }
+    
+    .why_volvo_sec .why_swiper .swiper-slide .txt_box p + p{
+        font-size: var(--size-xxs);
+        line-height: 1.5;
+        font-family: 'Pretendard-Light';
+    }
+
+    .why_volvo_sec .why_swiper .why_pagination{
+        display: block;
+        position: relative;
+        top:2px;
+    }
+
+    .why_volvo_sec .why_swiper .why_pagination .swiper-pagination-bullet-active{
+        background-color: var(--color-volvo-skyblue);
+    }
+}
 
 
 /* !===== sec My Volvo ===== */
@@ -297,6 +512,10 @@
     margin: 0 auto;
 }
 
+.my_volvo_sec .sec_tit{
+    flex:1.5;
+}
+
 .my_volvo_sec .sec_tit h3{
     margin: 0 0 20px 0;
     font-size: var(--size-xxl);
@@ -307,6 +526,7 @@
 .my_volvo_sec .sec_tit p{
     margin: 0 0 35px 0;
     font-size: var(--size-m);
+    line-height: 1.5;
     font-family: 'Pretendard-Regular';
     color: var(--color-black);
 }
@@ -314,6 +534,7 @@
 .my_volvo_sec .sec_tit a{
     padding: 20px 70px;
     box-sizing: border-box;
+    text-align: center;
     font-size: var(--size-m);
     font-family: 'Pretendard-Medium';
     border: 1px solid var(--color-volvo-navy);
@@ -326,7 +547,7 @@
 }
 
 .my_volvo_sec .visual_box{
-    max-width: 820px;
+    flex: 2;
 }
 
 .my_volvo_sec .visual_box > div{
@@ -353,6 +574,71 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media(max-width:1240px){
+    .my_volvo_sec{
+        padding: 0 20px;
+        box-sizing: border-box; 
+    }
+
+    .my_volvo_sec .my_volvo_sec_wrap{
+        gap: 20px;
+    }
+
+    .my_volvo_sec .sec_tit h3{
+        margin: 0 0 15px 0;
+        font-size: 2.75rem;
+    }
+    
+    .my_volvo_sec .sec_tit p{
+        margin: 0 0 20px 0;
+        font-size: var(--size-s);
+    }
+    
+    .my_volvo_sec .sec_tit a{
+        padding: 20px 20px;
+        font-size: var(--size-xs);
+    }
+
+    .my_volvo_sec .visual_box{
+        max-width: 820px;
+    }
+}
+
+@media(max-width:768px){
+    .my_volvo_sec{
+        margin: 100px 0; 
+    }
+
+    .my_volvo_sec .my_volvo_sec_wrap{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .my_volvo_sec .sec_tit h3{
+        font-size: var(--size-m);
+    }
+
+    .my_volvo_sec .sec_tit p{
+        font-size: var(--size-xs);
+    }
+
+    .my_volvo_sec .sec_tit a{
+        padding: 10px 70px;
+        width: 100%;
+        font-size: var(--size-xxs);
+    }
+
+    .my_volvo_sec .visual_box > div{
+        gap: 10px;
+        margin: 0 0 10px 0;
+    }
+
+    .my_volvo_sec .visual_box > div:first-child .img_box{
+        display: none;
+    }
+
 }
 
 
@@ -411,7 +697,7 @@
     border-bottom: 2px solid #fff;  
     transform: scaleX(0); 
     transition: transform 300ms ease-in-out;
-    transform-origin:  0% 50%;
+    transform-origin: 0% 50%;
 }
 
 .electric_cars_sec .electric_cars_sec_wrap > div:hover .txt_box a::after{
@@ -434,10 +720,58 @@
     filter: brightness(1);
 }
 
+@media(max-width:1240px){
+    .electric_cars_sec{
+        padding: 0 20px;
+    }
+
+    .electric_cars_sec .electric_cars_sec_wrap > div .txt_box{
+        position: absolute;
+        top:25px;
+        left: 25px;
+        max-width: 230px;
+    }
+
+    .electric_cars_sec .electric_cars_sec_wrap > div .txt_box h3 {
+        margin: 0 0 15px 0;
+        font-size: var(--size-m);
+    }
+    
+    .electric_cars_sec .electric_cars_sec_wrap > div .txt_box p{
+        margin: 0 0 16px 0;
+        font-size: var(--size-xs);
+    }
+    
+    .electric_cars_sec .electric_cars_sec_wrap > div .txt_box a{
+        font-size: var(--size-xxs);
+    }
+}
+
+@media(max-width:768px){
+    .electric_cars_sec{
+        margin: 100px 0;
+    }
+
+    .electric_cars_sec .electric_cars_sec_wrap{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+
 
 /* !===== sec News ===== */
 .news_sec{
     margin: 200px 0 200px 40px;
+}
+
+.news_sec h3{
+    max-width: 1440px;
+    margin: 0 auto 15px auto;
+    font-size: var(--size-xxl);
+    font-family: 'Pretendard-SemiBold';
+    color: var(--color-black);
 }
 
 .news_sec .swiper {
@@ -445,9 +779,8 @@
     height: 100%;
 }
 
-.news_sec .swiper-slide {
-    font-size: var(--size-s);
-    font-family: 'Pretendard-Medium';
+.news_sec .swiper-slide{
+    cursor: pointer;
 }
 
 .news_sec .swiper-slide .img_box{
@@ -465,4 +798,28 @@
 
 .news_sec .swiper-slide:hover img{
     transform: scale(1.2);
+}
+
+.news_sec .swiper-slide h5 {
+    font-size: var(--size-xs);
+    line-height: 1.2;
+    font-family: 'Pretendard-Regular';
+    color: var(--color-black);
+}
+
+@media(max-width:1240px){
+    .news_sec{
+        margin: 100px 0 100px 20px;
+    }
+
+    .news_sec .swiper-slide .img_box{
+        margin: 0 0 10px 0;
+        overflow: hidden;
+    }
+}
+
+@media(max-width:768px){
+    .news_sec h3{
+        font-size: var(--size-m);
+    }
 }

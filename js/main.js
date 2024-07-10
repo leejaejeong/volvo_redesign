@@ -40,6 +40,13 @@ $(function(){
             $('.side_menu_tab li').eq($(this).index()).addClass('active');
             $('.side_menu_contents > div').eq($(this).index()).show().siblings('.side_menu_contents > div').hide();
         })
+
+        $('.side_menu_btn img').click(function(){
+            $('.side_menu').removeClass('show');
+            $('.side_menu').addClass('show');
+            $('.side_menu_tab li').removeClass('active');
+            $('.side_menu_tab li').eq(0).addClass('active');
+        })
     })
 })
 
