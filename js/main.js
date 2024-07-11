@@ -49,7 +49,44 @@ $(function(){
 })
 
 // ! main page > why volvo
-$('.why_swiper_tab .swiper-slide').click(function(){
-    $('.why_swiper_tab .swiper-slide').removeClass('active');
-    $(this).addClass('active');
+$(function(){
+    $(document).ready(function(){
+        $('.why_swiper_tab .swiper-slide').click(function(){
+            $('.why_swiper_tab .swiper-slide').removeClass('active');
+            $(this).addClass('active');
+        })
+    })
+})
+
+
+
+// ! EX30 page > COLOR
+$(function(){
+    $(document).ready(function(){
+        $('.ex30_color_sec .color_select .color_select_btn button').click(function(){
+            $('.ex30_color_sec .color_select .color_select_btn button').removeClass('active');
+            $(this).addClass('active');
+            $('.ex30_color_sec .color_select h5').eq($(this).index()).fadeIn(500).siblings('.ex30_color_sec .color_select h5').hide();
+            $('.ex30_color_sec .color_visual_box > div').eq($(this).index()).fadeIn(500).siblings('.ex30_color_sec .color_visual_box > div').hide();
+        }).filter(':eq(0)').click();
+    })
+})
+
+
+// ! EX30 page > interior
+$(function(){
+    $(document).ready(function(){
+        $('.interior_sec .control_btn .play_btn').hide();
+        $('.interior_sec .control_btn .pause_btn').click(function(){
+            $('.interior_sec video').get(0).pause();
+            $('.interior_sec .control_btn .play_btn').show();
+            $('.interior_sec .control_btn .pause_btn').hide();
+        })
+
+        $('.interior_sec .control_btn .play_btn').click(function(){
+            $('.interior_sec video').get(0).play();
+            $('.interior_sec .control_btn .pause_btn').show();
+            $('.interior_sec .control_btn .play_btn').hide();
+        })
+    })
 })

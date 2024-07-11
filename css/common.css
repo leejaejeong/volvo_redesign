@@ -771,6 +771,10 @@ footer .footer_info > div span{
     color: var(--color-white);
 }
 
+footer .footer_info > div span > br{
+    display: none;
+}
+
 footer .footer_info .footer_sns_ico{
     display: flex;
     justify-content: flex-end;
@@ -884,6 +888,10 @@ footer .footer_info .footer_sns_ico .img_box img{
 
     footer .footer_info > div span{
         line-height: 1.2;
+    }
+
+    footer .footer_info > div span > br{
+        display: block;
     }
 
     footer .footer_info .footer_sns_ico{

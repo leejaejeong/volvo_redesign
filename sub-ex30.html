@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 </head>
+
 <body>
     <!-- ! header -->
     <header>
@@ -377,7 +379,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- ! EX30 visual -->
     <div class="ex30_visual">
         <div class="p_ex30_visual">
@@ -426,7 +428,7 @@
                 </ul>
             </div>
         </section>
-        
+
         <section class="sec function_sec">
             <div class="function_sec_wrap">
                 <h3>편리함은 편안함을 의미합니다.</h3>
@@ -440,7 +442,7 @@
                     <div class="txt_box wheel_txt_box">
                         <h5>사각 스포츠 스티어링 휠</h5>
                         <p>
-                            스티어링 휠의 사각형 디자인은 스포티한 그립감을 제공합니다. 
+                            스티어링 휠의 사각형 디자인은 스포티한 그립감을 제공합니다.
                             또한 운전자 제어를 위한 스타일리시한 스위치가 장착되어 있습니다.
                         </p>
                     </div>
@@ -450,8 +452,8 @@
                     <div class="txt_box seat_txt_box">
                         <h5>슬림한 인체공학적인 시트</h5>
                         <p>
-                            척추 지지력을 극대화할 수 있도록 시트를 설계합니다. 
-                            이렇게 하면 압력, 굽힘 및 어깨 긴장을 줄일 수 있습니다. 
+                            척추 지지력을 극대화할 수 있도록 시트를 설계합니다.
+                            이렇게 하면 압력, 굽힘 및 어깨 긴장을 줄일 수 있습니다.
                             전동식 설정을 사용하여 이상적인 시트 위치를 찾으십시오.
                         </p>
                     </div>
@@ -461,7 +463,7 @@
                     <div class="txt_box storage_txt_box">
                         <h5>다용도 화물 공간 및 보관 공간</h5>
                         <p>
-                            EX30의 넓은 318L 트렁크로 운반하는 모든 것을 보다 쉽게 싣고 내릴 수 있습니다. 
+                            EX30의 넓은 318L 트렁크로 운반하는 모든 것을 보다 쉽게 싣고 내릴 수 있습니다.
                             바닥이 평평하고 립이 없으며, 높낮이 조절로 더욱 편리하게 사용할 수 있습니다.
                         </p>
                     </div>
@@ -472,15 +474,145 @@
                 gsap.registerPlugin(ScrollTrigger);
 
                 gsap.from(".function_sec_wrap .txt_box, .function_sec_wrap .bullet, .function_sec_wrap .line", {
-                    scrollTrigger:{
-                    trigger:".function_sec_wrap .txt_box, .function_sec_wrap .bullet, .function_sec_wrap .line",
-                    start:"0% 100%",
+                    scrollTrigger: {
+                        trigger: ".function_sec_wrap .txt_box, .function_sec_wrap .bullet, .function_sec_wrap .line",
+                        start: "0% 100%",
                     },
                     y: 100,
                     duration: 1,
                 })
             </script>
         </section>
+
+        <section class="sec ex30_color_sec">
+            <div class="ex30_color_sec_wrap">
+                <div class="color_change_box">
+                    <div class="sec_tit">
+                        <h5>외장색상</h5>
+                        <h3>COLOR</h3>
+                    </div>
+                    <div class="color_select">
+                        <div class="txt_box">
+                            <h5>클라우드 블루(Cloud Blue)</h5>
+                            <h5>크리스탈 화이트 (Crystal White)</h5>
+                            <h5>오닉스 블랙 (Onyx Black)</h5>
+                            <h5>베이퍼 그레이 (Vapour Grey)</h5>
+                        </div>
+                        <div class="color_select_btn">
+                            <button class="blue_btn"></button>
+                            <button class="white_btn"></button>
+                            <button class="black_btn"></button>
+                            <button class="grey_btn"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="color_visual_box">
+                    <div class="color_visual">
+                        <div class="video_box">
+                            <video src="video/volvo_ex30_color_blue_video.mp4" autoplay muted loop playsinline></video>
+                        </div>
+                        <div class="img_box">
+                            <img src="imgs/volvo_ex30_color_blue_img.jpg" alt="클라우드 블루">
+                        </div>
+                    </div>
+                    <div class="color_visual">
+                        <div class="video_box">
+                            <video src="video/volvo_ex30_color_white_video.mp4" autoplay muted loop playsinline></video>
+                        </div>
+                        <div class="img_box">
+                            <img src="imgs/volvo_ex30_color_white_img.jpg" alt="크리스탈 화이트">
+                        </div>
+                    </div>
+                    <div class="color_visual">
+                        <div class="video_box">
+                            <video src="video/volvo_ex30_color_black_video.mp4" autoplay muted loop playsinline></video>
+                        </div>
+                        <div class="img_box">
+                            <img src="imgs/volvo_ex30_color_black_img.jpg" alt="오닉스 블랙">
+                        </div>
+                    </div>
+                    <div class="color_visual">
+                        <div class="video_box">
+                            <video src="video/volvo_ex30_color_grey_video.mp4" autoplay muted loop playsinline></video>
+                        </div>
+                        <div class="img_box">
+                            <img src="imgs/volvo_ex30_color_grey_img.jpg" alt="베이퍼 그레이">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec interior_sec">
+            <div class="interior_sec_wrap">
+                <div class="sec_tit">
+                    <h5>인테리어</h5>
+                    <div class="box">
+                        <h3>
+                            친환경 소재로<br>
+                            더 새롭고 더 세련되어진
+                        </h3>
+                        <p>
+                            EX30을 위해 자연에서 영감을 받은 인테리어를 만들었습니다.
+                            조화로운 색상의 실내 장식과 재생 및 재활용된 소재로 만들어진 장식이 아름답게 조화를 이루고 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="video_box">
+                    <video src="video/volvo_ex30_interior_video.mp4" autoplay muted loop playsinline></video>
+                    <div class="control_btn">
+                        <img src="imgs/volvo_ex30_interior_video_pause_btn.png" alt="일시정지" class="pause_btn">
+                        <img src="imgs/volvo_ex30_interior_video_play_btn.png" alt="재생" class="play_btn">
+                    </div>
+                </div>
+                <div class="btn_box">
+                    <a href="#">인테리어 자세히 보기</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ! function pop up -->
+    <div class="function_popup">
+        <div class="function_popup_wrap">
+            <div class="popup">
+                <div class="txt_box">
+                    <h5>사각 스포츠 스티어링 휠</h5>
+                    <p>
+                        스티어링 휠의 사각형 디자인은 스포티한 그립감을 제공합니다.
+                        또한 운전자 제어를 위한 스타일리시한 스위치가 장착되어 있습니다.
+                    </p>
+                </div>
+                <div class="img_box">
+                    <img src="imgs/volvo_ex30_function_popup_wheel.png" alt="사각 스포츠 스티어링 휠">
+                </div>
+            </div>
+            <div class="popup">
+                <div class="txt_box">
+                    <h5>슬림한 인체공학적인 시트</h5>
+                    <p>
+                        척추 지지력을 극대화할 수 있도록 시트를 설계합니다.
+                        이렇게 하면 압력, 굽힘 및 어깨 긴장을 줄일 수 있습니다.
+                        전동식 설정을 사용하여 이상적인 시트 위치를 찾으십시오.
+                    </p>
+                </div>
+                <div class="img_box">
+                    <img src="imgs/volvo_ex30_function_popup_seat.png" alt="슬림한 인체공학적인 시트">
+                </div>
+            </div>
+            <div class="popup">
+                <div class="txt_box">
+                    <h5>다용도 화물 공간 및 보관 공간</h5>
+                    <p>
+                        EX30의 넓은 318L 트렁크로 운반하는 모든 것을 보다 쉽게 싣고 내릴 수 있습니다.
+                        바닥이 평평하고 립이 없으며, 높낮이 조절로 더욱 편리하게 사용할 수 있습니다.
+                    </p>
+                </div>
+                <div class="img_box">
+                    <img src="imgs/volvo_ex30_function_popup_storage.png" alt="다용도 화물 공간 및 보관 공간">
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- ! footer -->
@@ -586,7 +718,7 @@
                             <a href="#">위치정보사업 및 위치기반 이용약관</a>
                         </li>
                     </ul>
-                    <span>Copyright © 2024 Volvo Car Corporation<br>(또는 계열사 또는 라이센스 제공자)</span>
+                    <span>Copyright © 2024 Volvo Car Corporation<br> (또는 계열사 또는 라이센스 제공자)</span>
                 </div>
                 <div class="footer_sns_ico">
                     <div class="img_box">
@@ -605,4 +737,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
