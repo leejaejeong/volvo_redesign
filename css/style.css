@@ -58,6 +58,7 @@
     border: 1px solid #fff;
     color: var(--color-white);
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .main_visual .btn_box a:hover{
@@ -232,6 +233,7 @@
     border: 1px solid #fff;
     color: var(--color-white);
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .recharge_sec .swiper-slide .txt_btn_box .btn_box a:hover{
@@ -539,6 +541,7 @@
     font-family: 'Pretendard-Medium';
     border: 1px solid var(--color-volvo-navy);
     color: var(--color-volvo-navy);
+    transition: 0.3s;
 }
 
 .my_volvo_sec .sec_tit a:hover{
@@ -850,6 +853,7 @@
     left: 0;
     transform: translateY(-50%);
     padding: 0 0 0 240px;
+    box-sizing: border-box;
 }
 
 .ex30_visual .txt_box h1{
@@ -865,6 +869,43 @@
     line-height: 1.2;
     font-family: 'Pretendard-Regular';
     color: var(--color-white);
+}
+
+@media(max-width:1240px){
+    .ex30_visual .txt_box{
+        top:20%;
+        transform: translateY(0);
+        padding: 0 0 0 20px;
+    }
+
+    .ex30_visual .txt_box h1{
+        font-size: 3rem;
+    }
+
+    .ex30_visual .txt_box h5{
+        font-size: var(--size-xs);
+    }
+}
+
+@media(max-width:768px){
+    .p_ex30_visual{
+        display: none;
+    }
+    
+    .m_ex30_visual{
+        display: block;
+    }
+
+    .m_ex30_visual video{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        vertical-align: bottom;
+    }
+
+    .ex30_visual .txt_box h1{
+        font-size: var(--size-xl);
+    }
 }
 
 
@@ -914,6 +955,70 @@
     font-size: var(--size-s);
 }
 
+@media(max-width:1240px){
+    .performance_sec {
+        background-position: center;
+    }
+
+    .performance_sec .performance_txt_wrap{
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .performance_sec ul{
+        gap:50px;
+        width: 40%;
+    }
+
+    .performance_sec h3{
+        font-size: 2.75rem;
+    }
+
+    .performance_sec p{
+        font-size: var(--size-l);
+    
+    }
+    
+    .performance_sec p > strong{
+        font-size: 2.75rem;
+    }
+    
+    .performance_sec p + p {
+        font-size: var(--size-xs);
+        white-space: nowrap;
+        line-height: 1.3;
+    }
+}
+
+@media(max-width:768px){
+    .performance_sec{
+        padding: 80px 0;
+    }
+
+    .performance_sec h3{
+        font-size: var(--size-xl);
+        margin: 0 0 80px 0;
+        line-height: 1.2;
+    }
+
+    .performance_sec ul{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .performance_sec p{
+        font-size: 1.25rem;
+    }
+
+    .performance_sec p > strong{
+        font-size: var(--size-xl);
+    }
+
+    .performance_sec p + p{
+        font-size: var(--size-xs);
+    }
+}
+
 
 
 
@@ -925,12 +1030,19 @@
 .function_sec .function_sec_wrap{
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .function_sec h3{
+    margin: 0 0 45px 0;
     font-size: var(--size-xxl);
     font-family: 'Pretendard-SemiBold';
-    color: var(--color-white);
+    color: var(--color-black);
+}
+
+.function_sec h3 > br{
+    display: none;
 }
 
 .function_sec .function_sec_wrap > div{
@@ -941,7 +1053,7 @@
     width: 100%;
 }
 
-.function_sec .bullet{
+.function_sec .p_function_content .bullet{
     position: absolute;
     width: 15px;
     height: 15px;
@@ -950,68 +1062,68 @@
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.function_sec .wheel_bullet{
-    top: 290px;
-    left: 826px;
+.function_sec .p_function_content .wheel_bullet{
+    top: 35.8%;
+    left: 57.3%;
 }
 
-.function_sec .seat_bullet{
-    top: 370px;
-    left: 147px;
+.function_sec .p_function_content .seat_bullet{
+    top: 45.9%;
+    left: 10%;
 }
 
-.function_sec .storage_bullet{
-    top: 579px;
-    left: 697px;
+.function_sec .p_function_content .storage_bullet{
+    top: 71.5%;
+    left: 48.5%;
 }
 
-.function_sec .line{
+.function_sec .p_function_content .line{
     position: absolute;
     height: 2px;
     background-color: var(--color-volvo-skyblue);
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.function_sec .wheel_line01{
-    top:296px;
-    left:845px;
-    width: 50px;
+.function_sec .p_function_content .wheel_line01{
+    top:36.6%;
+    left:58.6%;
+    width: 3.472%;
 }
 
-.function_sec .wheel_line02{
-    top:269px;
-    left:875px;
+.function_sec .p_function_content .wheel_line02{
+    top:33.2%;
+    left:60.7%;
     transform: rotate(-70deg);
-    width: 58px;
+    width: 4.028%;
 }
 
-.function_sec .seat_line01{
-    top:364px;
-    left:159px;
+.function_sec .p_function_content .seat_line01{
+    top:45.2%;
+    left:11%;
     transform: rotate(-45deg);
-    width: 17px;
+    width: 1.181%;
 }
 
-.function_sec .seat_line02{
-    top:358px;
-    left:173px;
-    width: 111px;
+.function_sec .p_function_content .seat_line02{
+    top:44.5%;
+    left:11.95%;
+    width: 7.708%;
 }
 
-.function_sec .storage_line01{
-    top:573px;
-    left:710px;
+.function_sec .p_function_content .storage_line01{
+    top: 70.5%;
+    left: 49.3%;
     transform: rotate(-45deg);
-    width: 17px;
+    width: 1.181%;
 }
 
-.function_sec .storage_line02{
-    top:567px;
-    left:724px;
-    width: 111px;
+.function_sec .p_function_content .storage_line02{
+    top: 69.8%;
+    left: 50.3%;
+    width: 7.708%;
 }
 
-.function_sec .txt_box{
+.function_sec .p_function_content .txt_box{
     position: absolute;
     padding: 26px;
     box-sizing: border-box;
@@ -1022,36 +1134,141 @@
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.function_sec .txt_box h5,
-.function_sec .txt_box p{
+.function_sec .p_function_content .txt_box h5,
+.function_sec .p_function_content .txt_box p{
     color: var(--color-white);
 }
 
-.function_sec .txt_box h5{
+.function_sec .p_function_content .txt_box h5{
     margin: 0 0 16px 0;
     font-size: var(--size-m);
     font-family: 'Pretendard-Medium';
 }
 
-.function_sec .txt_box p{
+.function_sec .p_function_content .txt_box p{
     font-size: var(--size-xs);
     line-height: 1.2;
     font-family: 'Pretendard-Regular';
 }
 
-.function_sec .wheel_txt_box{
-    top:84px;
-    left:816px;
+.function_sec .p_function_content .wheel_txt_box{
+    top: 10.5%;
+    left: 58%;
 }
 
-.function_sec .seat_txt_box{
-    top: 222px;
-    left: 293px;
+.function_sec .p_function_content .seat_txt_box{
+    top: 28%;
+    left: 20%;
 }
 
-.function_sec .storage_txt_box{
-    top: 510px;
-    left: 840px;
+.function_sec .p_function_content .storage_txt_box{
+    top: 64%;
+    left: 58.5%;
+}
+
+.function_sec .m_function_content{
+    display: none;
+}
+
+@media(max-width:1240px){
+    .function_sec h3{
+        font-size: 2.75rem;
+    }
+
+    .function_sec h3 > br{
+        display: block;
+    }
+
+    .function_sec .p_function_content{
+        display: none;
+    }
+
+    .function_sec .m_function_content{
+        display: block;
+        position: relative;
+    }
+
+    .function_sec .m_function_content .bullet{
+        position: absolute;  
+    }
+
+    .function_sec .m_function_content .bullet::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: var(--color-volvo-skyblue);
+    }
+
+    .function_sec .m_function_content .bullet::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        animation: shining 2s linear infinite;
+    }
+
+    .function_sec .m_function_content .wheel_bullet{
+        top: 33%;
+        left: 56%;
+    }
+
+    .function_sec .m_function_content .seat_bullet{
+        top: 40%;
+        left: 11%;
+    }
+
+    .function_sec .m_function_content .storage_bullet{
+        top: 68%;
+        left: 46%;
+    }
+
+    @keyframes shining {
+        0% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(1.8);
+        }
+      }
+}
+
+@media(max-width:768px){
+    .function_sec{
+        margin: 100px 0;
+    }
+
+    .function_sec h3{
+        margin: 0 0 15px 0;
+        font-size: var(--size-xl);
+        line-height: 1.2;
+    }
+
+    .function_sec .m_function_content .bullet::before{
+        width: 20px;
+        height: 20px;
+    }
+
+    .function_sec .m_function_content .bullet::after{
+        width: 20px;
+        height: 20px;
+    }
 }
 
 
@@ -1115,6 +1332,7 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .ex30_color_sec .color_select .color_select_btn button.active{
@@ -1151,10 +1369,12 @@
 
 .ex30_color_sec .color_visual .video_box{
     flex: 2;
+    width: 100%;
 }
 
 .ex30_color_sec .color_visual .img_box{
     flex: 1;
+    width: 100%;
 }
 
 .ex30_color_sec .color_visual > div video{
@@ -1167,6 +1387,62 @@
     width: 100%;
     height: 524px;
     object-fit: cover;
+}
+
+@media(max-width:1240px){
+    .ex30_color_sec_wrap{
+        padding: 0 20px;
+    }
+
+    .ex30_color_sec .sec_tit h5{
+        font-size: var(--size-xs);
+    }
+    
+    .ex30_color_sec .sec_tit h3{
+        font-size: 2.75rem
+    }
+}
+
+@media(max-width:768px){
+    .ex30_color_sec{
+        margin: 100px 0;
+    }
+
+    .ex30_color_sec .sec_tit h3{
+        font-size: var(--size-xl);
+    }
+
+    .ex30_color_sec .color_change_box{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin: 0 0 20px 0;
+    }
+
+    .ex30_color_sec .color_select h5{
+        font-size: var(--size-s);
+    }
+
+    .ex30_color_sec .color_select{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .ex30_color_sec .color_visual{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ex30_color_sec .color_visual > div video{
+        min-width: 325px;
+        height: 400px;
+    }
+
+    .ex30_color_sec .color_visual > div img{
+        min-width: 325px;
+        height: 200px;
+    }
 }
 
 
@@ -1249,12 +1525,85 @@
     font-family: 'Pretendard-Medium';
     border: 1px solid var(--color-volvo-navy);
     color: var(--color-volvo-navy);
+    transition: 0.3s;
 }
 
 .interior_sec .btn_box a:hover{
     background-color: var(--color-volvo-navy);
     color: var(--color-white);
 }
+
+@media(max-width:1240px){
+    .interior_sec_wrap{
+        padding: 0 20px;
+    }
+
+    .interior_sec .sec_tit h5{
+        font-size: var(--size-xs);
+    }
+    
+    .interior_sec .sec_tit .box{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .interior_sec .sec_tit h3{
+        flex:1.5;
+        font-size: 2.75rem;
+    }
+    
+    .interior_sec .sec_tit p{
+        flex: 2;
+        font-size: var(--size-s);
+    }
+}
+
+@media(max-width:768px){
+    .interior_sec{
+        margin: 100px 0;
+    }
+
+    .interior_sec .sec_tit{
+        margin: 0 0 20px 0;
+    }
+
+    .interior_sec .sec_tit .box{
+        gap: 10px;
+    }
+
+    .interior_sec .sec_tit h3{
+        font-size: var(--size-xl);
+        line-height: 1.2;
+    }
+
+    .interior_sec .sec_tit p{
+        font-size: var(--size-xxs);
+    }
+
+    .interior_sec .video_box{
+        margin: 0 0 20px 0;
+    }
+
+    .interior_sec .video_box video{
+        height: 185px;
+    }
+
+    .interior_sec .video_box .control_btn{
+        bottom: 10px;
+        right: 15px;
+        max-width: 30px;
+    }
+
+    .interior_sec .btn_box a{
+        padding: 10px;
+        width: 100%;
+        font-size: var(--size-xxs);
+    }
+}
+
+
+
 
 /* !===== EX30 gallery ===== */
 .gallery_sec{
@@ -1289,6 +1638,7 @@
     border: 1px solid var(--color-volvo-navy);
     background-color: var(--color-volvo-navy);
     color: var(--color-white);
+    transition: 0.3s;
 }
 
 .gallery_sec .sec_tit a:hover{
@@ -1297,7 +1647,7 @@
     color: var(--color-volvo-navy);
 }
 
-.gallery_imgs .img_box_wrap01{
+.gallery_imgs .img_boxes01{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1305,43 +1655,51 @@
     margin: 0 0 30px 0;
 }
 
-.gallery_imgs .img_box_wrap01 ul:first-child{
-    width: 70%;
+.gallery_imgs .img_boxes01 .box_container01{
+    flex: 7;
 }
 
-.gallery_imgs .img_box_wrap01 ul:last-child{
-    width: 30%;
+.gallery_imgs .img_boxes01 .box_container02{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    flex: 3;
 }
 
-.gallery_imgs .img_box_wrap01 ul > li:last-child{
+.gallery_imgs .img_boxes01 .box01{
+    margin: 0 0 30px 0;
+}
+
+.gallery_imgs .img_boxes01 .box02{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-    margin: 30px 0 0 0;
 }
 
-.gallery_imgs .img_box_wrap01 ul > .flex_img_wrap > div:first-child{
+.gallery_imgs .img_boxes01 .box02 > div:first-child{
     width: 60%;
 }
 
-.gallery_imgs .img_box_wrap01 ul > .flex_img_wrap > div:last-child{
+.gallery_imgs .img_boxes01 .box02 > div:last-child{
     width: 40%;
 }
 
-.gallery_imgs .img_box_wrap02 ul{
+.gallery_imgs .img_boxes02 > .box_container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
 }
 
-.gallery_imgs .img_box_wrap02 li:first-child{
-    width: 30%;
+.gallery_imgs .img_boxes02 div:first-child{
+    flex: 3;
 }
 
-.gallery_imgs .img_box_wrap02 li:last-child{
-    width: 70%;
+.gallery_imgs .img_boxes02 div:last-child{
+    flex: 7;
 }
 
 .gallery_imgs img{
@@ -1351,34 +1709,71 @@
     object-position: center;
 }
 
-.gallery_imgs .img_box_wrap01 ul:first-child li > img{
+.gallery_imgs .img_boxes01 .box01 img{
     object-position: bottom;
 }
 
+@media(max-width:1240px){
+    .gallery_sec_wrap{
+        padding: 0 20px;
+    }
+}
 
+@media(max-width:768px){
+    .gallery_sec .sec_tit h3{
+        font-size: var(--size-xl);
+        flex: 2;
+    }
 
+    .gallery_sec .sec_tit a{
+        flex: 1.5;
+        padding: 10px;
+        width: 100%;
+        font-size: var(--size-xxs);
+    }
+
+    .gallery_imgs .img_boxes01{
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+    }
+
+    .gallery_imgs .img_boxes01 .box01{
+        margin: 0 0 10px 0;
+    }
+
+    .gallery_imgs .img_boxes01 .box02{
+        gap: 10px;
+    }
+
+    .gallery_imgs .img_boxes01 .box_container01{
+        width: 100%;
+    }
+
+    .gallery_imgs .img_boxes01 .box_container02{
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .gallery_imgs .img_boxes01 .box_container02 > .img_box{
+        flex: 1;
+    }
+
+    .gallery_imgs .img_boxes02{
+        display: none;
+    }
+
+    .gallery_imgs img{
+        height: 170px;
+    }
+}
 
 
 
 /* !===== EX30 function pop up ===== */
 .function_popup{
-    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(34, 34, 34, 0.6);
-}
-
-.function_popup_wrap{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
-.function_popup .popup{
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1389,6 +1784,7 @@
     width: 80%;
     padding: 40px;
     background-color: var(--color-volvo-navy);
+    z-index: 100;
 }
 
 .function_popup .txt_box{
@@ -1418,4 +1814,16 @@
 
 .function_popup .img_box img{
     width: 100%;
+}
+
+@media(max-width:768px){
+    .function_popup{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .function_popup .txt_box h5{
+        font-size: var(--size-s);
+    
+    }
 }

@@ -64,9 +64,9 @@
         </div>
         <div class="side_menu_tab">
             <ul>
-                <li>Models</li>
-                <li>Shop</li>
-                <li>My Volvo</li>
+                <li >Models</li>
+                <li class="side_calc">Shop</li>
+                <li class="side_calc">My Volvo</li>
                 <li>About us</li>
             </ul>
         </div>
@@ -431,10 +431,10 @@
 
         <section class="sec function_sec">
             <div class="function_sec_wrap">
-                <h3>편리함은 편안함을 의미합니다.</h3>
-                <div>
+                <h3>편리함은 <br>편안함을 의미합니다.</h3>
+                <div class="p_function_content">
                     <div class="img_box">
-                        <img src="imgs/volvo_ex30_function.png" alt="ex30 기능">
+                        <img src="imgs/volvo_ex30_function.png" alt="ex30 내부 이미지">
                     </div>
                     <div class="bullet wheel_bullet"></div>
                     <div class="line wheel_line01"></div>
@@ -468,17 +468,29 @@
                         </p>
                     </div>
                 </div>
+                <div class="m_function_content">
+                    <div class="img_box">
+                        <img src="imgs/volvo_ex30_function.png" alt="ex30 내부 이미지">
+                    </div>
+                    <div class="bullet wheel_bullet"></div>
+                    <div class="bullet seat_bullet"></div>
+                    <div class="bullet storage_bullet"></div>
+                </div>
             </div>
 
             <script>
                 gsap.registerPlugin(ScrollTrigger);
-
-                gsap.from(".function_sec_wrap .txt_box, .function_sec_wrap .bullet, .function_sec_wrap .line", {
+                gsap.set(".function_sec_wrap .txt_box, .function_sec_wrap .bullet, .function_sec_wrap .line", {
+                    opacity: 0,
+                    y:50,
+                })
+                gsap.to(".function_sec_wrap .txt_box, .function_sec_wrap .bullet, .function_sec_wrap .line", {
                     scrollTrigger: {
                         trigger: ".function_sec_wrap .txt_box, .function_sec_wrap .bullet, .function_sec_wrap .line",
-                        start: "0% 100%",
+                        start: "0% 80%",
                     },
-                    y: 100,
+                    y:0,
+                    opacity: 1,
                     duration: 1,
                 })
             </script>
@@ -578,48 +590,49 @@
                     <a href="#">갤러리 더보기</a>
                 </div>
                 <div class="gallery_imgs">
-                    <div class="img_box_wrap img_box_wrap01">
-                        <ul>
-                            <li>
-                                <img src="imgs/volvo_ex30_gallery_img.png" alt="ex30 이미지">
-                            </li>
-                            <li class="flex_img_wrap">
+                    <div class="img_boxes img_boxes01">
+                        <div class="box_container box_container01">
+                            <div class="box box01">
+                                <div class="img_box">
+                                    <img src="imgs/volvo_ex30_gallery_img.png" alt="ex30 이미지">
+                                </div>
+                            </div>
+                            <div class="box box02">
                                 <div class="img_box">
                                     <img src="imgs/volvo_ex30_gallery_img02.png" alt="ex30 이미지">
                                 </div>
                                 <div class="img_box">
                                     <img src="imgs/volvo_ex30_gallery_img03.png" alt="ex30 이미지">
                                 </div>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
+                            </div>
+                        </div>
+                        <div class="box_container box_container02">
+                            <div class="img_box">
                                 <img src="imgs/volvo_ex30_gallery_img04.png" alt="ex30 이미지">
-                            </li>
-                            <li>
+                            </div>
+                            <div class="img_box">
                                 <img src="imgs/volvo_ex30_gallery_img05.png" alt="ex30 이미지">
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="img_box_wrap img_box_wrap02">
-                        <ul>
-                            <li>
+                    <div class="img_boxes img_boxes02">
+                        <div class="box_container">
+                            <div class="img_box">
                                 <img src="imgs/volvo_ex30_gallery_img06.png" alt="ex30 이미지">
-                            </li>
-                            <li>
+                            </div>
+                            <div class="img_box">
                                 <img src="imgs/volvo_ex30_gallery_img07.png" alt="ex30 이미지">
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- ! function pop up -->
-    <div class="function_popup">
-        <div class="function_popup_wrap">
-            <div class="popup">
+    <!-- ! EX30 function pop up -->
+    <div class="function_popup_wrap">
+        <div class="function_popup wheel_function_popup">
                 <div class="txt_box">
                     <h5>사각 스포츠 스티어링 휠</h5>
                     <p>
@@ -630,8 +643,8 @@
                 <div class="img_box">
                     <img src="imgs/volvo_ex30_function_popup_wheel.png" alt="사각 스포츠 스티어링 휠">
                 </div>
-            </div>
-            <div class="popup">
+        </div>
+        <div class="function_popup seat_function_popup">
                 <div class="txt_box">
                     <h5>슬림한 인체공학적인 시트</h5>
                     <p>
@@ -643,8 +656,8 @@
                 <div class="img_box">
                     <img src="imgs/volvo_ex30_function_popup_seat.png" alt="슬림한 인체공학적인 시트">
                 </div>
-            </div>
-            <div class="popup">
+        </div>
+        <div class="function_popup storage_function_popup">
                 <div class="txt_box">
                     <h5>다용도 화물 공간 및 보관 공간</h5>
                     <p>
@@ -655,9 +668,9 @@
                 <div class="img_box">
                     <img src="imgs/volvo_ex30_function_popup_storage.png" alt="다용도 화물 공간 및 보관 공간">
                 </div>
-            </div>
         </div>
     </div>
+    <div class="bg"></div>
 
     <!-- ! footer -->
     <footer>

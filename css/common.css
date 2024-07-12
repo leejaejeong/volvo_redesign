@@ -210,7 +210,7 @@ header.back_change .sub_nav div:hover img{
     background-color: var(--color-volvo-navy);
     overflow: auto;
     z-index: 999;
-    transition: 1s;
+    transition: 0.7s;
 }
 
 .side_menu.hide{
@@ -540,7 +540,7 @@ header.back_change .sub_nav div:hover img{
 }
 
 
-/* ===== side menu > about us ===== */
+/* !===== side menu > about us ===== */
 .side_menu .about_us_contents > div{
     margin: 0 0 60px 0;
 }
@@ -570,7 +570,7 @@ header.back_change .sub_nav div:hover img{
 }
 
 
-/* ===== side menu scroll bar ===== */
+/* !===== side menu scroll bar ===== */
 .side_menu::-webkit-scrollbar {
     width: 8px;  /* 스크롤바의 너비 */
 }
@@ -583,6 +583,30 @@ header.back_change .sub_nav div:hover img{
 .side_menu::-webkit-scrollbar-track {
     background: #F4F4F4;  /*스크롤바 뒷 배경 색상*/
 }
+
+.shop_contents,
+.volvo_contents,
+.about_us_contents {
+    height: 100vh;
+}
+
+.shop_contents::-webkit-scrollbar,
+.volvo_contents::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+.shop_contents::-webkit-scrollbar-thumb,
+.volvo_contents::-webkit-scrollbar-thumb {
+    background:#7089AC; /* 스크롤바의 색상 */
+    border-radius: 10px;
+}
+
+.shop_contents::-webkit-scrollbar-track,
+.volvo_contents::-webkit-scrollbar-track {
+    background: #F4F4F4;  /*스크롤바 뒷 배경 색상*/
+}
+
+
 
 
 /* !===== footer ===== */
@@ -897,4 +921,26 @@ footer .footer_info .footer_sns_ico .img_box img{
     footer .footer_info .footer_sns_ico{
         justify-content: flex-start;
     }
+}
+
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0; 
+    visibility: hidden;
+    background-color: rgba(34, 34, 34, 0.2);
+    transition: 0.3s;
+}
+
+.bg.active{
+    opacity: 1; 
+    visibility: visible;
+    background-color: rgba(34, 34, 34, 0.6);
+}
+
+body.stop_scroll{
+    overflow: hidden;
 }
