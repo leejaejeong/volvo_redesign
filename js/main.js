@@ -17,11 +17,13 @@ $(function(){
 
         // ! side menu
         $('.side_menu .close_btn .img_box img').click(function(){
+            bg.removeClass('active');
             $('.side_menu').removeClass('show');
             $('.side_menu').addClass('hide');
         })
     
         $('.gnb ul li').click(function(){
+            bg.addClass('active');
             $('.side_menu').removeClass('hide');
             $('.side_menu').removeClass('show');
             $('.side_menu').addClass('show');
@@ -116,10 +118,12 @@ $(function(){
             $('.interior_sec .control_btn .play_btn').hide();
         })
 
-
+        
         // ! background
         bg.click(function(){
             bg.removeClass('active');
+            $('.side_menu').removeClass('show');
+            $('.side_menu').addClass('hide');
             $('.function_popup').hide();
             if($('body').hasClass('stop_scroll')){
                 $('body').removeClass('stop_scroll');

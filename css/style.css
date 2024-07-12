@@ -509,7 +509,7 @@
 .my_volvo_sec .my_volvo_sec_wrap{
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    gap: 100px;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -521,6 +521,7 @@
 .my_volvo_sec .sec_tit h3{
     margin: 0 0 20px 0;
     font-size: var(--size-xxl);
+    line-height: 1.2;
     font-family: 'Pretendard-SemiBold';
     color: var(--color-black);
 }
@@ -1189,7 +1190,7 @@
     }
 
     .function_sec .m_function_content .bullet{
-        position: absolute;  
+        position: absolute;
     }
 
     .function_sec .m_function_content .bullet::after{
@@ -1203,6 +1204,7 @@
         height: 30px;
         border-radius: 50%;
         background-color: var(--color-volvo-skyblue);
+        cursor: pointer;
     }
 
     .function_sec .m_function_content .bullet::before{

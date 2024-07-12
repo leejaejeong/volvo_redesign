@@ -56,6 +56,7 @@ header .gnb ul li:hover{
 
 header .logo_box{
     max-width: 180px;
+    cursor: pointer;
 }
 
 header .logo_box img{
